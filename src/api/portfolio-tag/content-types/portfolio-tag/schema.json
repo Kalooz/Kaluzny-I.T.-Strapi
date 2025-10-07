@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolio_tags",
+  "info": {
+    "singularName": "portfolio-tag",
+    "pluralName": "portfolio-tags",
+    "displayName": "Portfolio Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::portfolio.portfolio",
+      "inversedBy": "portfolio_tags"
+    }
+  }
+}
