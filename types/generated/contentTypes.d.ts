@@ -712,11 +712,14 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
       'api::portfolio.portfolio'
     > &
       Schema.Attribute.Private;
-    long_description: Schema.Attribute.Text;
+    location: Schema.Attribute.String;
+    long_description: Schema.Attribute.RichText;
     portfolio_tags: Schema.Attribute.Relation<
       'manyToMany',
       'api::portfolio-tag.portfolio-tag'
     >;
+    project_finish: Schema.Attribute.Date;
+    project_start: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
     short_description: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'title'>;
@@ -726,6 +729,7 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.String;
   };
 }
 

@@ -18,7 +18,7 @@
       "type": "string"
     },
     "long_description": {
-      "type": "text"
+      "type": "richtext"
     },
     "images": {
       "type": "media",
@@ -52,6 +52,18 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "url": {
+      "type": "string"
+    },
+    "project_start": {
+      "type": "date"
+    },
+    "project_finish": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string"
     }
   }
 }
